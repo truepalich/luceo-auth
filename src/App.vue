@@ -1,54 +1,54 @@
 <template>
-  <div id="app">
-    <header>
-      <span>Vue.js PWA</span>
-    </header>
-    <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
-      <router-view></router-view>
-    </main>
-  </div>
+  <v-app>
+    <!--<v-app-bar-->
+      <!--app-->
+      <!--color="blue darken-1"-->
+    <!--&gt;-->
+      <!--<v-toolbar-title><router-link style="text-decoration: none; color: #fff;" :to="{ name: 'Home' }"><v-icon class="mr-1">mdi-view-dashboard</v-icon>Luceo Auth</router-link></v-toolbar-title>-->
+      <!--<div class="flex-grow-1"></div>-->
+
+      <!--<v-avatar color="blue darken-2" class="mr-1">-->
+        <!--<v-icon>mdi-account-circle</v-icon>-->
+      <!--</v-avatar>-->
+      <!--<v-menu-->
+        <!--left-->
+        <!--bottom-->
+      <!--&gt;-->
+        <!--<template v-slot:activator="{ on }">-->
+          <!--<v-btn icon v-on="on" small>-->
+            <!--<v-icon>mdi-dots-vertical</v-icon>-->
+          <!--</v-btn>-->
+        <!--</template>-->
+
+        <!--<v-list>-->
+          <!--<v-list-item>-->
+            <!--<v-list-item-title>Logout</v-list-item-title>-->
+          <!--</v-list-item>-->
+        <!--</v-list>-->
+      <!--</v-menu>-->
+    <!--</v-app-bar>-->
+
+    <v-content>
+      <v-container fluid>
+        <router-view></router-view>
+      </v-container>
+    </v-content>
+
+    <!--<v-footer color="blue darken-1">-->
+      <!--<span class="white&#45;&#45;text">&copy; 2019</span>-->
+    <!--</v-footer>-->
+  </v-app>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  export default {
+    name: 'app',
+    created: function () {
+      this.$vuetify.theme.dark = true
+    }
+  }
 </script>
 
 <style>
-body {
-  margin: 0;
-}
 
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-
-main {
-  text-align: center;
-  margin-top: 40px;
-}
-
-header {
-  margin: 0;
-  height: 56px;
-  padding: 0 16px 0 24px;
-  background-color: #35495E;
-  color: #ffffff;
-}
-
-header span {
-  display: block;
-  position: relative;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: .02em;
-  font-weight: 400;
-  box-sizing: border-box;
-  padding-top: 16px;
-}
 </style>

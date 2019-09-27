@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuetify": "^2.0.11"
   },
   "devDependencies": {
+    "@mdi/font": "^4.2.95",
     "autoprefixer": "^7.1.5",
     "babel-core": "^6.26.0",
     "sw-precache-webpack-plugin": "^0.11.4",
