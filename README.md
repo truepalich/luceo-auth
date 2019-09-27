@@ -1,6 +1,6 @@
 # luceo-auth
 
-> A Vue.js project
+> Luceo Auth
 
 ## Build Setup
 
