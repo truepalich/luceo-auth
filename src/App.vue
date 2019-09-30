@@ -28,11 +28,9 @@
       <!--</v-menu>-->
     <!--</v-app-bar>-->
 
-    <v-content>
-      <v-container fluid>
-        <router-view></router-view>
-      </v-container>
-    </v-content>
+    <router-view></router-view>
+
+
 
     <!--<v-footer color="blue darken-1">-->
       <!--<span class="white&#45;&#45;text">&copy; 2019</span>-->
@@ -50,5 +48,8 @@
 </script>
 
 <style>
-
+  .form-type-1 {
+    max-width: 440px;
+    margin: 0px auto;
+  }
 </style>

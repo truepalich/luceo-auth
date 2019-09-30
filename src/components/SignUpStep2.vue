@@ -9,35 +9,38 @@
           lazy-validation
           autocomplete="off"
         >
-          <v-card class="mx-auto px-2 py-5">
-            <div class="d-flex justify-center mb-3 pt-6">
-              <img src="../assets/LuceoSports-Logo.png" alt="Luceo" width="150px">
-            </div>
-            <v-card-title class="justify-center">
-              Password Recovery
+          <div class="d-flex justify-center mb-3">
+            <img src="../assets/LuceoSports-Logo.png" alt="Luceo" width="150px">
+          </div>
+
+          <v-card class="mx-auto pa-2">
+            <v-card-title class="justify-center flex-column">
+              <span>Signup</span>
+              <v-subheader class="justify-center">Step 2. Please, enter KEY from email</v-subheader>
             </v-card-title>
             <v-card-text class="mt-4">
 
+
               <v-text-field
-                v-model="email"
-                :rules="emailRules"
-                label="Email"
+                v-model="key"
+                :rules="keyRules"
+                label="Key"
                 outlined
                 required
               ></v-text-field>
+
               <div class="d-block">
                 <v-btn
                   color="formBut1"
-                  @click="validate"
                   class="px-5 text-capitalize"
+                  @click="validate"
                 >
                   Next
                 </v-btn>
-                &nbsp;<router-link :to="{ name: 'Login' }">Back to Login</router-link>
               </div>
+
             </v-card-text>
           </v-card>
-
         </v-form>
       </v-flex>
 
@@ -46,25 +49,21 @@
 </template>
 
 <script>
-  // import { ValidationProvider } from 'vee-validate';
-
   export default {
-    // components: {
-    //   ValidationProvider
-    // },
-    name: "ForgotPassword",
+    name: "SignUpStep2",
     data: () => ({
       valid: true,
-      email: '',
-      emailRules: [
-        v => !!v || 'Email is required',
-        v => /.+@.+\..+/.test(v) || 'Email must be valid',
+      key: '',
+      keyRules: [
+        v => !!v || 'Key is required',
+        // v => (v && v.length <= 2) || 'First Name must be less than 2 characters',
       ],
     }),
 
     methods: {
       validate () {
         if (this.$refs.form.validate()) {
+          this.$router.push({name: 'SignUpStep3'})
           // this.snackbar = true
         }
       }

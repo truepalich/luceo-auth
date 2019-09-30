@@ -14,6 +14,9 @@ export default new Vuetify({
         // primary: colors.red.darken1, // #E53935
         // secondary: colors.red.lighten4, // #FFCDD2
         // accent: colors.indigo.base, // #3F51B5
+        formBut1: colors.orange.darken3,
+
+
         dialogHeader: colors.blue.darken1,
         dialogBut1: colors.orange.base,
         dialogBut2: colors.orange.darken2,
