@@ -4,7 +4,7 @@
     <ul>
       <li><router-link :to="{ name: 'SignUpStep1' }">Sign Up. Step 1</router-link></li>
       <li><router-link :to="{ name: 'SignUpStep2' }">Sign Up. Step 2</router-link></li>
-      <li><router-link :to="{ name: 'SignUpStep3' }">Sign Up. Step 3</router-link></li>
+      <!--<li><router-link :to="{ name: 'SignUpStep3' }">Sign Up. Step 3</router-link></li>-->
       <li><router-link :to="{ name: 'Login' }">Login</router-link></li>
       <li><router-link :to="{ name: 'ForgotPassword' }">Forgot password</router-link></li>
       <li><router-link :to="{ name: 'SetPassword' }">Set password</router-link></li>

@@ -9,11 +9,12 @@
           lazy-validation
           autocomplete="off"
         >
-          <div class="d-flex justify-center mb-3">
-            <img src="../assets/LuceoSports-Logo.png" alt="Luceo" width="150px">
-          </div>
 
-          <v-card class="mx-auto pa-2">
+          <v-card class="mx-auto px-2 py-5">
+            <div class="d-flex justify-center mb-3 pt-6">
+              <img src="../assets/LuceoSports-Logo.png" alt="Luceo" width="150px">
+            </div>
+
             <v-card-title class="justify-center flex-column">
               <span>Signup</span>
               <v-subheader class="justify-center">Step 1. Add private information</v-subheader>
