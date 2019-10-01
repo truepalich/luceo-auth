@@ -28,7 +28,7 @@ export default new Vuetify({
         // filterBut3: colors.amber.darken4,
         //
         // links: colors.deepOrange.lighten2,
-        // selectedColors: colors.amber.darken4,
+        selectedColors: colors.amber.darken4,
       },
     },
   },

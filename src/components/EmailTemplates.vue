@@ -1,6 +1,6 @@
 <template>
   <div>
-    Email Templates
+    Email Templates in progress..
   </div>
 </template>
 

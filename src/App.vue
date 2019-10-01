@@ -49,7 +49,7 @@
 
 <style>
   .form-type-1 {
-    max-width: 440px;
+    max-width: 440px !important;
     margin: 0px auto;
   }
 </style>
