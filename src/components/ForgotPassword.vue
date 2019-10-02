@@ -7,9 +7,8 @@
           ref="form"
           v-model="valid"
           lazy-validation
-          autocomplete="off"
         >
-          <v-card class="mx-auto px-2 py-5">
+          <v-card class="mx-auto px-2 py-5 form-page">
             <div class="d-flex justify-center mb-3 pt-6">
               <img src="../assets/LuceoSports-Logo.png" alt="Luceo" width="150px">
             </div>
@@ -21,10 +20,13 @@
               <v-text-field
                 v-model="email"
                 :rules="emailRules"
-                label="Email"
-                outlined
+                placeholder="Email"
                 required
+                solo
+                light
+                class="mb-1"
               ></v-text-field>
+
               <div class="d-block">
                 <v-btn
                   color="formBut1"
@@ -46,12 +48,7 @@
 </template>
 
 <script>
-  // import { ValidationProvider } from 'vee-validate';
-
   export default {
-    // components: {
-    //   ValidationProvider
-    // },
     name: "ForgotPassword",
     data: () => ({
       valid: true,
@@ -72,6 +69,6 @@
   }
 </script>
 
-<style scoped>
+<style>
 
 </style>

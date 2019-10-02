@@ -7,10 +7,9 @@
           ref="form"
           v-model="valid"
           lazy-validation
-          autocomplete="off"
         >
 
-          <v-card class="mx-auto px-2 py-5">
+          <v-card class="mx-auto px-2 py-5 form-page">
             <div class="d-flex justify-center mb-3 pt-6">
               <img src="../assets/LuceoSports-Logo.png" alt="Luceo" width="150px">
             </div>
@@ -21,13 +20,14 @@
             </v-card-title>
             <v-card-text class="mt-4">
 
-
               <v-text-field
                 v-model="key"
                 :rules="keyRules"
-                label="Key"
-                outlined
+                placeholder="Key"
                 required
+                solo
+                light
+                class="mb-1"
               ></v-text-field>
 
               <div class="d-block">

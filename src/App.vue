@@ -52,4 +52,22 @@
     max-width: 440px !important;
     margin: 0px auto;
   }
+
+  .v-application .error--text.v-input.v-text-field .v-input__slot {
+    border: 1px solid #ff5252;
+  }
+  .form-page .v-text-field .v-input__slot {
+    padding: 0px 1px !important;
+    border: 1px solid #fff;
+    margin-bottom: 4px;
+  }
+
+  .form-page .v-text-field input {
+    text-indent: 10px;
+  }
+
+  .form-page .v-input input {
+    min-height: 45px;
+    border-radius: 3px;
+  }
 </style>

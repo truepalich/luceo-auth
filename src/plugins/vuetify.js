@@ -3,8 +3,11 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import colors from 'vuetify/lib/util/colors'
+// import Vuelidate from 'vuelidate'
 
 Vue.use(Vuetify)
+// Vue.use(Vuelidate)
+
 Vue.config.productionTip = false
 
 export default new Vuetify({

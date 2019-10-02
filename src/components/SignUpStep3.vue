@@ -10,7 +10,7 @@
           autocomplete="off"
         >
 
-          <v-card class="mx-auto px-2 py-5">
+          <v-card class="mx-auto px-2 py-5 form-page">
             <div class="d-flex justify-center mb-3 pt-6">
               <img src="../assets/LuceoSports-Logo.png" alt="Luceo" width="150px">
             </div>
@@ -23,19 +23,23 @@
               <v-text-field
                 v-model="pwd"
                 :rules="pwdRules"
-                label="Password"
+                placeholder="New Password"
                 type="password"
-                outlined
                 required
+                solo
+                light
+                class="mb-1"
               ></v-text-field>
 
               <v-text-field
-                v-model="pwdRepeat"
-                :rules="pwdRules"
-                label="Password Repeat"
+                v-model="pwdConfirmation"
+                :rules="pwdConfirmationRules"
+                placeholder="New Password Again"
                 type="password"
-                outlined
                 required
+                solo
+                light
+                class="mb-1"
               ></v-text-field>
 
               <div class="d-block">
@@ -59,23 +63,25 @@
 </template>
 
 <script>
-  // import Vue from 'vue'
-  // import  * as VeeValidate from 'vee-validate'
-  // Vue.use(VeeValidate)
-
   export default {
-    // $_veeValidate: {
-    //   validator: 'new',
-    // },
     name: "SignUpStep3",
     data: () => ({
       valid: true,
       pwd: '',
-      pwdRepeat: '',
+      pwdConfirmation: '',
       pwdRules: [
-        v => !!v || 'Password is required',
+        v => !!v || 'New Password is required',
       ],
     }),
+
+    computed: {
+      pwdConfirmationRules() {
+        return [
+          () => (this.pwd === this.pwdConfirmation) || 'Passwords must match',
+          v => !!v || 'New Password Confirmation is required'
+        ];
+      },
+    },
 
     methods: {
       validate () {
@@ -85,19 +91,6 @@
         }
       }
     },
-
-    // methods: {
-    //   submit () {
-    //     this.$validator.validateAll()
-    //       .then(result => {
-    //         console.log(result)
-    //       })
-    //   },
-    //   clear () {
-    //     this.pass = ''
-    //     this.pass2 = ''
-    //   }
-    // }
   }
 </script>
 

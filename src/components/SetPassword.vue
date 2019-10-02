@@ -7,32 +7,37 @@
           ref="form"
           v-model="valid"
           lazy-validation
-          autocomplete="off"
         >
-
-          <v-card class="mx-auto px-2 py-5">
+          <v-card class="mx-auto px-2 py-5 form-page">
             <div class="d-flex justify-center mb-3 pt-6">
               <img src="../assets/LuceoSports-Logo.png" alt="Luceo" width="150px">
             </div>
-            <v-card-title class="justify-center flex-column">Set Password</v-card-title>
+            <v-card-title class="justify-center flex-column">
+              <span>Set Password</span>
+              <v-subheader class="justify-center">Password change for account: test@test.com</v-subheader>
+            </v-card-title>
             <v-card-text class="mt-4">
 
               <v-text-field
                 v-model="pwd"
                 :rules="pwdRules"
-                label="New Password"
+                placeholder="New Password"
                 type="password"
-                outlined
                 required
+                solo
+                light
+                class="mb-1"
               ></v-text-field>
 
               <v-text-field
-                v-model="pwdRepeat"
-                :rules="pwdRules"
-                label="New Password Repeat"
+                v-model="pwdConfirmation"
+                :rules="pwdConfirmationRules"
+                placeholder="New Password Again"
                 type="password"
-                outlined
                 required
+                solo
+                light
+                class="mb-1"
               ></v-text-field>
 
               <div class="d-block">
@@ -41,7 +46,7 @@
                   class="px-5 text-capitalize"
                   @click="validate"
                 >
-                  Set
+                  Save
                 </v-btn>
               </div>
 
@@ -61,20 +66,29 @@
     data: () => ({
       valid: true,
       pwd: '',
-      pwdRepeat: '',
+      pwdConfirmation: '',
       pwdRules: [
-        v => !!v || 'Password is required',
+        v => !!v || 'New Password is required',
       ],
-    }),
+  }),
 
-    methods: {
-      validate () {
-        if (this.$refs.form.validate()) {
-          this.$router.push({name: 'Profile'})
-          // this.snackbar = true
-        }
-      }
+  computed: {
+    pwdConfirmationRules() {
+      return [
+        () => (this.pwd === this.pwdConfirmation) || 'Passwords must match',
+        v => !!v || 'New Password Confirmation is required'
+      ];
     },
+  },
+
+  methods: {
+    validate () {
+      if (this.$refs.form.validate()) {
+        this.$router.push({name: 'Profile'})
+        // this.snackbar = true
+      }
+    }
+  },
   }
 </script>
 
