@@ -14,24 +14,9 @@ export default new Vuetify({
   theme: {
     themes: {
       dark: {
-        // primary: colors.red.darken1, // #E53935
-        // secondary: colors.red.lighten4, // #FFCDD2
-        // accent: colors.indigo.base, // #3F51B5
         formBut1: colors.orange.darken3,
-        //
-        // dialogHeader: colors.blue.darken1,
-        // dialogBut1: colors.orange.base,
-        // dialogBut2: colors.orange.darken2,
-        // dialogBut3: colors.orange.darken4,
-        // dialogBut4: colors.teal.darken3,
-        // dialogBut5: colors.deepOrange.darken4,
-        //
-        // filterBut1: colors.deepOrange.lighten1,
-        // filterBut2: colors.orange.lighten1,
-        // filterBut3: colors.amber.darken4,
-        //
-        // links: colors.deepOrange.lighten2,
         selectedColors: colors.amber.darken4,
+        appsBut: colors.grey.darken1,
       },
     },
   },

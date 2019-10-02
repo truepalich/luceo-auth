@@ -85,9 +85,9 @@
 
     methods: {
       validate () {
-        // console.log(this.$refs.form.validate())
         if (this.$refs.form.validate()) {
-          this.snackbar = true
+          this.$router.push({name: 'Profile'})
+          // this.snackbar = true
         }
       },
     },

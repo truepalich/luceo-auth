@@ -5,6 +5,7 @@ import Login from '../components/Login'
 import ForgotPassword from '../components/ForgotPassword'
 import SetPassword from '../components/SetPassword'
 import Profile from '../components/Profile'
+import EditProfile from '../components/EditProfile'
 import SignUpStep1 from '../components/SignUpStep1'
 import SignUpStep2 from '../components/SignUpStep2'
 import SignUpStep3 from '../components/SignUpStep3'
@@ -38,6 +39,11 @@ export default new Router({
       path: '/profile',
       name: 'Profile',
       component: Profile
+    },
+    {
+      path: '/edit-profile',
+      name: 'EditProfile',
+      component: EditProfile
     },
     {
       path: '/sign-up-step-1',
