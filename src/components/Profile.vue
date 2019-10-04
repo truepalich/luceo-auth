@@ -51,6 +51,9 @@
             <v-btn block x-large color="appsBut" dark class="mb-2 text-capitalize"><v-icon left dark>mdi-bulletin-board</v-icon> White board</v-btn>
             <v-btn block x-large color="appsBut" dark class="mb-2 text-capitalize"><v-icon left dark>mdi-gamepad</v-icon> Game plan editor</v-btn>
 
+            <v-btn block x-large color="appsBut" dark class="mb-2 text-capitalize"><v-icon left dark>mdi-library</v-icon> Assist Usage Reports</v-btn>
+            <v-btn block x-large color="appsBut" dark class="mb-2 text-capitalize"><v-icon left dark>mdi-account-multiple</v-icon> Resources and Community</v-btn>
+
             <!--<v-layout row wrap>-->
               <!--<v-flex v-bind="{[`xs${item.xs} sm${item.sm}`]: true}" v-for="(item, i) in cards" :key="`cards${i}`" class="ma-3">-->
                 <!--<v-hover>-->

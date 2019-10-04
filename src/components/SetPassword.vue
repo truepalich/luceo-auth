@@ -14,7 +14,7 @@
             </div>
             <v-card-title class="justify-center flex-column">
               <span>Set Password</span>
-              <v-subheader class="justify-center">Password change for account: test@test.com</v-subheader>
+              <p class="justify-center text-center subtitle-2 grey--text text--lighten-2 mt-4" style="word-break: break-word">Password change for account: test@test.com</p>
             </v-card-title>
             <v-card-text class="mt-4">
 

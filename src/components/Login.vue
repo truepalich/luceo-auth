@@ -36,12 +36,12 @@
                 class="mb-1"
               ></v-text-field>
 
-              <v-checkbox
-                v-model="checkbox"
-                label="Remember me"
-                color="selectedColors"
-                class="mt-0"
-              ></v-checkbox>
+              <!--<v-checkbox-->
+                <!--v-model="checkbox"-->
+                <!--label="Remember me"-->
+                <!--color="selectedColors"-->
+                <!--class="mt-0"-->
+              <!--&gt;</v-checkbox>-->
 
 
               <div class="d-block">

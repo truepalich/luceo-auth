@@ -7,23 +7,29 @@
           ref="form"
           v-model="valid"
           lazy-validation
-          autocomplete="off"
         >
 
           <v-card class="mx-auto px-2 py-5 form-page">
             <div class="d-flex justify-center mb-3 pt-6">
               <img src="../assets/LuceoSports-Logo.png" alt="Luceo" width="150px">
             </div>
+
             <v-card-title class="justify-center flex-column">
               <span>Signup</span>
-              <v-subheader class="justify-center">Step 3. Please, set your password</v-subheader>
+              <p class="justify-center text-center subtitle-2 grey--text text--lighten-2 mt-4" style="word-break: break-word">Please check your details and set your password<br/>to register with Luceo Sports</p>
             </v-card-title>
             <v-card-text class="mt-4">
+
+              <p class="body-1 white--text mb-5">
+                <span class="grey--text text--lighten-1">First name:</span> Alexei<br/>
+                <span class="grey--text text--lighten-1">Last name:</span> Chizhmakov<br/>
+                <span class="grey--text text--lighten-1">Email:</span> chizhmakov@itirra.com<br/>
+              </p>
 
               <v-text-field
                 v-model="pwd"
                 :rules="pwdRules"
-                placeholder="New Password"
+                placeholder="Set Password"
                 type="password"
                 required
                 solo
@@ -34,7 +40,7 @@
               <v-text-field
                 v-model="pwdConfirmation"
                 :rules="pwdConfirmationRules"
-                placeholder="New Password Again"
+                placeholder="Password Again"
                 type="password"
                 required
                 solo
@@ -55,7 +61,6 @@
             </v-card-text>
           </v-card>
         </v-form>
-
       </v-flex>
 
     </v-container>
@@ -64,13 +69,13 @@
 
 <script>
   export default {
-    name: "SignUpStep3",
+    name: "SignUp",
     data: () => ({
       valid: true,
       pwd: '',
       pwdConfirmation: '',
       pwdRules: [
-        v => !!v || 'New Password is required',
+        v => !!v || 'Password is required',
       ],
     }),
 
@@ -78,7 +83,7 @@
       pwdConfirmationRules() {
         return [
           () => (this.pwd === this.pwdConfirmation) || 'Passwords must match',
-          v => !!v || 'New Password Confirmation is required'
+          v => !!v || 'Password Confirmation is required'
         ];
       },
     },
