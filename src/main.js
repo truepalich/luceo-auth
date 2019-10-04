@@ -4,6 +4,7 @@ import '@mdi/font/css/materialdesignicons.css'
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 import vuetify from './plugins/vuetify'
 
 // import { ValidationProvider, extend } from 'vee-validate';
@@ -16,10 +17,21 @@ import vuetify from './plugins/vuetify'
 
 Vue.config.productionTip = false
 
+
+// router.beforeEach((to, from, next) => {
+//   if (from.params.brandSlug != undefined) {
+//     // next({ name: to.name + 'Brand' })
+//     next({ path: '/' })
+//   } else {
+//     next()
+//   }
+// })
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   vuetify,
   template: '<App/>',
   components: { App }

@@ -9,7 +9,7 @@
           <v-card-title class="justify-center">
             <v-row>
               <v-col class="d-flex align-center">
-                <router-link :to="{ name: 'Profile' }"><img src="../assets/LuceoSports-Logo.png" alt="Luceo" width="110px"></router-link>
+                <router-link :to="{ name: 'Profile' }"><img :src="brand.logo" :alt="brand.name"></router-link>
               </v-col>
               <v-col class="text-right">
                 <v-avatar color="grey darken-2" class="mr-0" size="30">
@@ -85,6 +85,15 @@
 <script>
     export default {
       name: "Profile",
+      data: () => ({
+        brand: {},
+      }),
+      created: function () {
+        this.brand = this.$store.getters.getBrandBySlug(this.$route.params.brandSlug);
+        if (this.brand == undefined) {
+          this.brand = this.$store.getters.getBrandBySlug('luceo-sports');
+        }
+      },
       computed: {
         cards() {
           let cards = [

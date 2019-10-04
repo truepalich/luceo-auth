@@ -21,31 +21,103 @@ export default new Router({
     {
       path: '/login',
       name: 'Login',
+      component: Login,
+      beforeEnter: (to, from, next) => {
+        if (from.params.brandSlug != undefined) {
+          next({name: 'LoginBrand'})
+        } else {
+          next()
+        }
+      }
+    },
+    {
+      path: '/login/:brandSlug',
+      name: 'LoginBrand',
       component: Login
     },
     {
       path: '/forgot-password',
       name: 'ForgotPassword',
+      component: ForgotPassword,
+      beforeEnter: (to, from, next) => {
+        if (from.params.brandSlug != undefined) {
+          next({name: 'ForgotPasswordBrand'})
+        } else {
+          next()
+        }
+      }
+    },
+    {
+      path: '/forgot-password/:brandSlug',
+      name: 'ForgotPasswordBrand',
       component: ForgotPassword
     },
     {
       path: '/set-password',
       name: 'SetPassword',
+      component: SetPassword,
+      beforeEnter: (to, from, next) => {
+        if (from.params.brandSlug != undefined) {
+          next({name: 'SetPasswordBrand'})
+        } else {
+          next()
+        }
+      }
+    },
+    {
+      path: '/set-password/:brandSlug',
+      name: 'SetPasswordBrand',
       component: SetPassword
     },
     {
       path: '/profile',
       name: 'Profile',
+      component: Profile,
+      beforeEnter: (to, from, next) => {
+        if (from.params.brandSlug != undefined) {
+          next({name: 'ProfileBrand'})
+        } else {
+          next()
+        }
+      }
+    },
+    {
+      path: '/profile/:brandSlug',
+      name: 'ProfileBrand',
       component: Profile
     },
     {
       path: '/edit-profile',
       name: 'EditProfile',
+      component: EditProfile,
+      beforeEnter: (to, from, next) => {
+        if (from.params.brandSlug != undefined) {
+          next({name: 'EditProfileBrand'})
+        } else {
+          next()
+        }
+      }
+    },
+    {
+      path: '/edit-profile/:brandSlug',
+      name: 'EditProfileBrand',
       component: EditProfile
     },
     {
       path: '/sign-up',
       name: 'SignUp',
+      component: SignUp,
+      beforeEnter: (to, from, next) => {
+        if (from.params.brandSlug != undefined) {
+          next({name: 'SignUpBrand'})
+        } else {
+          next()
+        }
+      }
+    },
+    {
+      path: '/sign-up',
+      name: 'SignUpBrand',
       component: SignUp
     },
     {

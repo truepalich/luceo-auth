@@ -43,7 +43,16 @@
     name: 'app',
     created: function () {
       this.$vuetify.theme.dark = true
-    }
+    },
+    // computed: {
+    //   brand () {
+    //     var brand = this.$store.getters.getBrandBySlug(this.$route.params.brandSlug);
+    //     if (this.brand == undefined) {
+    //       brand = this.$store.getters.getBrandBySlug('luceo-sports');
+    //     }
+    //     return brand
+    //   }
+    // }
   }
 </script>
 

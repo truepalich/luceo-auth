@@ -10,7 +10,7 @@
         >
           <v-card class="mx-auto px-2 py-5 form-page">
             <div class="d-flex justify-center mb-3 pt-6">
-              <img src="../assets/LuceoSports-Logo.png" alt="Luceo" width="150px">
+              <img :src="brand.logo" :alt="brand.name">
             </div>
             <v-card-title class="justify-center flex-column">
               <span>Set Password</span>
@@ -64,31 +64,39 @@
   export default {
     name: "SetPassword",
     data: () => ({
+      brand: {},
       valid: true,
       pwd: '',
       pwdConfirmation: '',
       pwdRules: [
         v => !!v || 'New Password is required',
       ],
-  }),
+    }),
 
-  computed: {
-    pwdConfirmationRules() {
-      return [
-        () => (this.pwd === this.pwdConfirmation) || 'Passwords must match',
-        v => !!v || 'New Password Confirmation is required'
-      ];
-    },
-  },
-
-  methods: {
-    validate () {
-      if (this.$refs.form.validate()) {
-        this.$router.push({name: 'Profile'})
-        // this.snackbar = true
+    created: function () {
+      this.brand = this.$store.getters.getBrandBySlug(this.$route.params.brandSlug);
+      if (this.brand == undefined) {
+        this.brand = this.$store.getters.getBrandBySlug('luceo-sports');
       }
-    }
-  },
+    },
+
+    computed: {
+      pwdConfirmationRules() {
+        return [
+          () => (this.pwd === this.pwdConfirmation) || 'Passwords must match',
+          v => !!v || 'New Password Confirmation is required'
+        ];
+      },
+    },
+
+    methods: {
+      validate () {
+        if (this.$refs.form.validate()) {
+          this.$router.push({name: 'Profile'})
+          // this.snackbar = true
+        }
+      }
+    },
   }
 </script>
 
