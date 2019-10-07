@@ -116,7 +116,7 @@ export default new Router({
       }
     },
     {
-      path: '/sign-up',
+      path: '/sign-up/:brandSlug',
       name: 'SignUpBrand',
       component: SignUp
     },

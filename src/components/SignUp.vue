@@ -23,7 +23,7 @@
               <p class="body-1 white--text mb-5">
                 <span class="grey--text text--lighten-1">First name:</span> Alexei<br/>
                 <span class="grey--text text--lighten-1">Last name:</span> Chizhmakov<br/>
-                <span class="grey--text text--lighten-1">Email:</span> chizhmakov@itirra.com<br/>
+                <span class="grey--text text--lighten-1">Email:</span> test@test.com<br/>
               </p>
 
               <v-text-field
@@ -50,7 +50,7 @@
 
               <div class="d-block">
                 <v-btn
-                  color="formBut1"
+                  :color="brand.primaryColor"
                   class="px-5 text-capitalize"
                   @click="validate"
                 >

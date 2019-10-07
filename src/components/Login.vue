@@ -46,12 +46,12 @@
               <div class="d-block">
                 <v-btn
                   @click="validate"
-                  color="formBut1"
+                  :color="brand.primaryColor"
                   class="px-5 text-capitalize"
                 >
                   Login
                 </v-btn>
-                <router-link :to="{ name: 'ForgotPassword' }">Forgot password?</router-link>
+                <router-link :style="linkStyles" :to="{ name: 'ForgotPassword' }">Forgot password?</router-link>
               </div>
 
             </v-card-text>
@@ -87,6 +87,12 @@
       this.brand = this.$store.getters.getBrandBySlug(this.$route.params.brandSlug);
       if (this.brand == undefined) {
         this.brand = this.$store.getters.getBrandBySlug('luceo-sports');
+      }
+    },
+
+    computed: {
+      linkStyles() {
+        return 'color: ' + this.brand.secondaryColor
       }
     },
 

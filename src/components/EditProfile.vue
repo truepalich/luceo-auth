@@ -84,7 +84,7 @@
 
               <div class="d-block">
                 <v-btn
-                  color="formBut1"
+                  :color="brand.primaryColor"
                   class="px-5 text-capitalize"
                   @click="validateInfo"
                 >
@@ -136,7 +136,7 @@
 
               <div class="d-block">
                 <v-btn
-                  color="formBut1"
+                  :color="brand.primaryColor"
                   class="px-5 text-capitalize"
                   @click="validatePassword"
                 >

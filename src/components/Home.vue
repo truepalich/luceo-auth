@@ -13,7 +13,7 @@
         <router-link :to="{ name: 'ForgotPasswordBrand', params: { brandSlug: 'rising-coaches' } }">Forgot password Rising Coaches</router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'SetPassword' }">Set password</router-link>
+        <router-link :to="{ name: 'SetPassword' }">Set password</router-link> /
         <router-link :to="{ name: 'SetPasswordBrand', params: { brandSlug: 'nhsbca' } }">Set Password NHSBCA</router-link> /
         <router-link :to="{ name: 'SetPasswordBrand', params: { brandSlug: 'rising-coaches' } }">Set Password Rising Coaches</router-link>
       </li>

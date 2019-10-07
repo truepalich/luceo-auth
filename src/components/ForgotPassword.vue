@@ -29,13 +29,13 @@
 
               <div class="d-block">
                 <v-btn
-                  color="formBut1"
+                  :color="brand.primaryColor"
                   @click="validate"
                   class="px-5 text-capitalize"
                 >
                   Next
                 </v-btn>
-                &nbsp;<router-link :to="{ name: 'Login' }">Back to Login</router-link>
+                &nbsp;<router-link :style="linkStyles" :to="{ name: 'Login' }">Back to Login</router-link>
               </div>
             </v-card-text>
           </v-card>
@@ -64,6 +64,12 @@
       this.brand = this.$store.getters.getBrandBySlug(this.$route.params.brandSlug);
       if (this.brand == undefined) {
         this.brand = this.$store.getters.getBrandBySlug('luceo-sports');
+      }
+    },
+
+    computed: {
+      linkStyles() {
+        return 'color: ' + this.brand.secondaryColor
       }
     },
 
